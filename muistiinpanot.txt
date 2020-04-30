@@ -36,3 +36,24 @@ docker exec <container-id> 	Executes a command inside the container
 
 Hakee docker tietokannasta
 docker search hello-world
+
+Hakee imagen tietyllä tagilla
+imagename:<tag> 	esim 	ubuntu:latest
+
+Tägää imagen lokaalisti. ubuntu:16.04 tägääntyy ubuntu:xenial :iksi
+docker tag ubuntu:16.04 ubuntu:xenial
+
+Liittyy dockeriin eikä sulje alkuperäistä jos poistuu attached dockerista
+sudo docker attach --sig-proxy=false hello-world
+
+Käynnistää uuden sovelluksen dockerissa
+  - docker exec -it hello-world bash
+
+Tappaa containerin nimen perusteella
+  - sudo docker kill hello-world
+
+Poistaa containerin nimen perusteella
+  - sudo docker rm hello-world
+
+Vivulla --rm containeri tuhoaa itsensä poistuttaessa, esim:
+  - docker run -d --rm -it --name looper-it ubuntu:16.04 sh -c 'while true; do date; sleep 1; done'

@@ -1,0 +1,5 @@
+Secret message is: "Docker is easy"
+Commands:
+sudo docker run devopsdockeruh/exec_bash_exercise
+sudo docker exec -it thirsty_northcutt bash
+tail -f ./logs.txt
