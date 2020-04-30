@@ -1,0 +1,35 @@
+A container consists only of a given application and its dependencies.
+
+Pullaa ja ajaa imagen
+docker run hello-world
+
+POistaa imágen
+docker rmi hello-world
+
+Näyttää kaikki kontainerit, päällä olevat ja jo ajetut
+sudo docker container ls -a
+
+Poistaa kontainerin, tai monta kerralla, id:Stä riittä pelkkä alku
+docker rm id1 id2 id3
+
+Poistaa kaikki containerit
+docker container prune
+
+Tyhjää kaikki imaget
+docker system prune
+
+Lataa imagen ilman ajamista
+docker pull hello-world
+
+Ajaa imagen ja -d vipu laittaa sen taustalle pyörimään
+docker run -d hello-world
+
+Usein käytettyjä komentoja:
+docker container ls -a 		Lists all containers
+docker images 			Lists all images
+docker pull <image> 		Pulls image from a docker registry called docker hub
+docker rm <container-id> 	Removes a container, you can use either container name or id
+docker rmi <image-id> 		Removes an image, you can use either image name or id
+docker stop <container-id> 	Stops a container, you can use either container name or id
+docker run <image> 		Runs an image creating a container, you can use either image name or id
+docker exec <container-id> 	Executes a command inside the container 
