@@ -40,7 +40,7 @@ docker search hello-world
 Hakee imagen tietyllä tagilla
 imagename:<tag> 	esim 	ubuntu:latest
 
-Tägää imagen lokaalisti. ubuntu:16.04 tägääntyy ubuntu:xenial :iksi
+Tägää imagen lokaalisti. ubuntu:16.04 tägääntyy ubuntu:xenial :iksi, voi käyttää myös imagen kopioimiseen
 docker tag ubuntu:16.04 ubuntu:xenial
 
 Liittyy dockeriin eikä sulje alkuperäistä jos poistuu attached dockerista
@@ -59,3 +59,37 @@ Vivulla --rm containeri tuhoaa itsensä poistuttaessa, esim:
   - docker run -d --rm -it --name looper-it ubuntu:16.04 sh -c 'while true; do date; sleep 1; done'
 
 
+# Containerin omat säädöt
+- uusi kansio
+  + kansioon tiedosto nimeltä Dockerfile
+    * Dockerfilen sisältö about:
+
+############################################    
+    FROM ubuntu:16.04 
+
+    WORKDIR /mydir 
+    RUN touch hello.txt 
+    COPY local.txt . 
+    RUN wget http://example.com/index.html 
+    CMD ["/bin/bash"]
+#############################################
+
+- WORKDIR asettaa työskentelykansion
+- RUN ajaa komennon
+- COPY kopioi tiedoston kansiosta
+- ADD lisää tiedoston ja tekee jotain taikatemppuja samalla
+- CMD komento joka suoritetaan kun docker ajetaan
+
+- docker build $PATH 
+  + buildaa dockerin
+- docker build -t myfirst $PATH
+  + buildaa ja nimeää dockerin
+- docker diff [id]
+  + näyttää muutokset imagen ja containerin välillä
+  + A == Added
+  + D == Deleted
+  + C == Changed
+- docker commit accf99660aeb myfirst-pluschanges
+  + tekee uuden imagen myfirst -containerissa tehtyjen muutosten pohjalta
+- docker run myfirst-pluschanges ls -l
+  + ajaa ls -l komennon dockerissa myfirst-pluschanges
