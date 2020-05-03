@@ -57,3 +57,5 @@ Poistaa containerin nimen perusteella
 
 Vivulla --rm containeri tuhoaa itsensä poistuttaessa, esim:
   - docker run -d --rm -it --name looper-it ubuntu:16.04 sh -c 'while true; do date; sleep 1; done'
+
+
