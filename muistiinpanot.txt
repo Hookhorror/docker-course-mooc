@@ -81,6 +81,7 @@ Vivulla --rm containeri tuhoaa itsensä poistuttaessa, esim:
 - CMD ["foo/bar","-foo"]  komento joka suoritetaan kun docker ajetaan
 - ENV lisää komennon suoraan ympäristömuuttujaan
 - ENTRYPOINT ["foo/bar","-foo"] määritellään main executable, jonka parametreiksi CMD:n argumentit tulevat
+ - EXPOSE <port> avaa yhteyden containeriin tietyn portin kautta
 
 - docker build $PATH 
   + buildaa dockerin
