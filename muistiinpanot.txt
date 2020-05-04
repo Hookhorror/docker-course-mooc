@@ -78,7 +78,9 @@ Vivulla --rm containeri tuhoaa itsensä poistuttaessa, esim:
 - RUN ajaa komennon
 - COPY kopioi tiedoston kansiosta
 - ADD lisää tiedoston ja tekee jotain taikatemppuja samalla
-- CMD komento joka suoritetaan kun docker ajetaan
+- CMD ["foo/bar","-foo"]  komento joka suoritetaan kun docker ajetaan
+- ENV lisää komennon suoraan ympäristömuuttujaan
+- ENTRYPOINT ["foo/bar","-foo"] määritellään main executable, jonka parametreiksi CMD:n argumentit tulevat
 
 - docker build $PATH 
   + buildaa dockerin
