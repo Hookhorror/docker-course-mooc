@@ -1,0 +1,14 @@
+I chose C# to my favourite programming environment.
+
+I took a Ubuntu 16.04 as my base, and then installed there dependencies mentioned in https://docs.microsoft.com/en-us/dotnet/core/install/linux-package-manager-ubuntu-1604
+
+Mentioned dependencies were:
+
+.NET Core SDK
+ASP.NET Core runtime
+.NET Core runtime
+
+Then I tested that I was able to create a new console project with command:
+$ dotnet new console
+
+and creating project was succesful.
