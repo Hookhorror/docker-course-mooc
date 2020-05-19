@@ -12,3 +12,6 @@ Then I tested that I was able to create a new console project with command:
 $ dotnet new console
 
 and creating project was succesful.
+
+Link to docker hub:
+https://hub.docker.com/repository/docker/jonikiviluoto/teht1-17
