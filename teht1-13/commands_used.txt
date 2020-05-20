@@ -1,5 +1,0 @@
-Build:
-$ docker build -t teht1-13 ./teht1-13/
-
-Run:
-$ docker run --rm -dp 8080:8080 teht1-13:latest

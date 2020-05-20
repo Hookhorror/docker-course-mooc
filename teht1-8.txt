@@ -1,8 +1,0 @@
-Commands used:
-######################################
-
-$ docker pull devopsdockeruh/first_volume_exercise
-
-$ docker run -v ~/opiskelu/docker-course-mooc/shared-with-docker/logs.txt:/usr/app/logs.txt devopsdockeruh/first_volume_exercise:latest
-
-#####################################

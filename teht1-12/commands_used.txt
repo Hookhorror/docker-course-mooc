@@ -1,5 +1,0 @@
-Build:
-$ docker build -t teht1-12back ./back/ && docker build -t teht1-12front ./front/
-
-Run:
-$ docker run --rm -v $(pwd)/logs.txt:/teht1-12/back/backend-example-docker/logs.txt -dp 8000:8000 teht1-12back:latest && docker run --rm -dp 5000:5000 teht1-12front:latest
