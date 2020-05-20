@@ -1,0 +1,2 @@
+Secret message: "This is the secret message"
+Command: basics

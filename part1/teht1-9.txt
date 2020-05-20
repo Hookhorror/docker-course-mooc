@@ -1,0 +1,19 @@
+Commands used:
+############################
+
+$ docker pull devopsdockeruh/ports_exercise
+
+$ docker run -p 3000:80 devopsdockeruh/ports_exercise
+
+###########################
+
+
+In browser:
+##########################
+
+Navigated to site: localhost:3000
+
+There was message:
+  Ports configured correctly!!
+
+##########################

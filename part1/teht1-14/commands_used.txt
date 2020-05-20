@@ -1,0 +1,5 @@
+Build:
+$ docker build -t teht1-14 ./teht1-14/
+
+Run:
+$ docker run --rm -dp 3000:3000 teht1-14:latest
