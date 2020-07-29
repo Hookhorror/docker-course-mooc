@@ -1,0 +1,7 @@
+Wed, 29 Jul 2020 12:16:54 GMT
+Wed, 29 Jul 2020 12:16:57 GMT
+Wed, 29 Jul 2020 12:17:00 GMT
+Wed, 29 Jul 2020 12:17:03 GMT
+Secret message is:
+"Volume bind mount is easy"
+Wed, 29 Jul 2020 12:17:09 GMT

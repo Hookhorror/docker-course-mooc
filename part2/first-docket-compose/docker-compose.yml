@@ -1,0 +1,9 @@
+version: '3' 
+
+services: 
+    youtube-dl-ubuntu:  
+      image: jonikiviluoto/first-docker-compose
+      build: . 
+      volumes:
+        - .:/mydir
+      container_name: youtube-dl
