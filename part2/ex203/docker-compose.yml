@@ -1,0 +1,14 @@
+version: '3.5'  
+
+services: 
+    back:
+      image: jonikiviluoto/ex203back
+      ports:
+        - 8000:8000
+      build: ./back
+
+    front: 
+      image: jonikiviluoto/ex203front
+      ports: 
+        - 5000:5000 
+      build: ./front
