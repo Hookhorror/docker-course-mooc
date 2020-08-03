@@ -1,0 +1,20 @@
+version: '3.5'  
+
+services: 
+    back:
+      image: jonikiviluoto/ex205back
+      ports:
+              - 8000:8000
+      build: ./back
+      environment:
+              -  REDIS=redis
+
+    redis:
+      image: redis
+
+
+      #front: 
+      # image: jonikiviluoto/ex205front
+      # ports: 
+      #  - 5000:5000 
+      # build: ./front
