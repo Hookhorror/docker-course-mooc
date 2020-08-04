@@ -1,0 +1,49 @@
+version: '3.5' 
+
+services:
+
+  db:
+    image: postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_PASSWORD: example
+      # POSTGRES_DB: database
+    volumes: 
+      - ./database:/var/lib/postgresql/data
+
+  adminer:
+    image: adminer
+    restart: always
+    environment:
+      - ADMINER_DESIGN=galkaev
+    ports:
+      - 8083:8080
+
+  backend:
+    image: jonikiviluoto/back
+    build: ./back
+    ports:
+      - 8000:8000
+    environment:
+      - DB_USERNAME=postgres
+      - DB_PASSWORD=example
+      - DB_NAME=postgres
+      - DB_HOST=db
+      - REDIS=redis
+    # volumes: 
+    #   - .database:src/database
+
+  frontend:
+    image: jonikiviluoto/front
+    build: ./front
+    ports:
+      - 5000:5000
+
+  redis:
+    image: redis
+
+
+volumes:
+  database:
+  files:
+
