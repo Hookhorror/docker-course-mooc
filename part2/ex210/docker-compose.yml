@@ -1,0 +1,54 @@
+version: '3.5' 
+
+services:
+  db:
+    image: postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_PASSWORD: example
+
+  adminer:
+    image: adminer
+    restart: always
+    environment:
+      - ADMINER_DESIGN=galkaev
+    ports:
+      - 8083:8080
+
+  backend:
+    image: jonikiviluoto/back
+    build: ./back
+    ports:
+      - 8000:8000
+    environment:
+      - DB_USERNAME=postgres
+      - DB_PASSWORD=example
+      - DB_NAME=postgres
+      - DB_HOST=db
+      - REDIS=redis
+      - API_URL=http://localhost/api
+
+  frontend:
+    image: jonikiviluoto/front
+    build: ./front
+    ports:
+      - 5000:5000
+    environment: 
+      - FRONT_URL=http://localhost
+
+
+  redis:
+    image: redis
+    
+  proxy:
+    image: nginx
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    ports:
+      - 80:80      
+
+
+volumes:
+  database:
+  files:
+
