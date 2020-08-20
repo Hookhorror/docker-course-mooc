@@ -47,19 +47,19 @@ fab5e942c505        3 weeks ago         /bin/sh -c #(nop)  CMD ["/bin/bash"]    
 ## Front ##
 
 IMAGE               CREATED             CREATED BY                                      SIZE                COMMENT
-c7c67a5f2136        6 minutes ago       /bin/sh -c #(nop)  CMD ["npm" "start"]          0B                  
-3a7063a61391        6 minutes ago       /bin/sh -c #(nop) WORKDIR /frontend-example-…   0B                  
-de7f3513aa13        6 minutes ago       /bin/sh -c apk add --no-cache git &&     git…   213MB               
-4859fc8dca0f        49 minutes ago      /bin/sh -c #(nop)  EXPOSE 5000                  0B                  
-4dd97e87c8ea        5 days ago          /bin/sh -c #(nop)  CMD ["node"]                 0B                  
-<missing>           5 days ago          /bin/sh -c #(nop)  ENTRYPOINT ["docker-entry…   0B                  
-<missing>           5 days ago          /bin/sh -c #(nop) COPY file:238737301d473041…   116B                
-<missing>           5 days ago          /bin/sh -c apk add --no-cache --virtual .bui…   7.62MB              
-<missing>           5 days ago          /bin/sh -c #(nop)  ENV YARN_VERSION=1.22.4      0B                  
-<missing>           5 days ago          /bin/sh -c addgroup -g 1000 node     && addu…   103MB               
-<missing>           5 days ago          /bin/sh -c #(nop)  ENV NODE_VERSION=14.8.0      0B                  
+3dbd8e1770e5        18 seconds ago      /bin/sh -c #(nop)  CMD ["serve" "-s" "-l" "5…   0B                  
+bd26e04dbe72        19 seconds ago      /bin/sh -c #(nop) WORKDIR /frontend-example-…   0B                  
+8782d069705d        20 seconds ago      /bin/sh -c apk add --no-cache git &&     git…   57.3MB              
+4859fc8dca0f        2 days ago          /bin/sh -c #(nop)  EXPOSE 5000                  0B                  
+4dd97e87c8ea        7 days ago          /bin/sh -c #(nop)  CMD ["node"]                 0B                  
+<missing>           7 days ago          /bin/sh -c #(nop)  ENTRYPOINT ["docker-entry…   0B                  
+<missing>           7 days ago          /bin/sh -c #(nop) COPY file:238737301d473041…   116B                
+<missing>           7 days ago          /bin/sh -c apk add --no-cache --virtual .bui…   7.62MB              
+<missing>           7 days ago          /bin/sh -c #(nop)  ENV YARN_VERSION=1.22.4      0B                  
+<missing>           7 days ago          /bin/sh -c addgroup -g 1000 node     && addu…   103MB               
+<missing>           7 days ago          /bin/sh -c #(nop)  ENV NODE_VERSION=14.8.0      0B                  
 <missing>           3 months ago        /bin/sh -c #(nop)  CMD ["/bin/sh"]              0B                  
-<missing>           3 months ago        /bin/sh -c #(nop) ADD file:66a440394c2442570…   5.58MB              
+<missing>           3 months ago        /bin/sh -c #(nop) ADD file:66a440394c2442570…   5.58MB                          
 
 
 ## Back ##
