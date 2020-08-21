@@ -12,6 +12,9 @@ RUN apt-get update && \
     git clone https://github.com/docker-hy/frontend-example-docker && \
     cd frontend-example-docker && \
     npm install && \
+    npm run build && \
+    rm -r node_modules && \
+    npm install -g serve && \
     apt-get purge -y --auto-remove curl git && \
     rm -rf /tmp/* && \
     rm -rf /usr/share/doc/* && \
@@ -22,5 +25,5 @@ WORKDIR frontend-example-docker
 
 EXPOSE 5000
 
-ENTRYPOINT ["npm"]
-CMD ["start"]
+# ENTRYPOINT ["npm"]
+CMD ["serve", "-s", "-l", "5000", "dist"]
